@@ -1,0 +1,12 @@
+{
+  "name": "retiro-emprendedor",
+  "version": "1.0.0",
+  "description": "Página web para Retiro Emprendedor",
+  "main": "retiro-emprendedor.html",
+  "scripts": {
+    "build": "mkdir dist 2>nul & copy *.html dist & copy *.png dist & copy *.jpeg dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

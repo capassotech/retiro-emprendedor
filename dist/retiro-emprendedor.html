@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Retiro Emprendedor — Un espacio entre pares · Ciudad de Mendoza · 10, 11 y 12 de octubre 2026</title>
+<meta name="description" content="Retiro presencial de 3 días para founders y emprendedores independientes de Argentina. 10, 11 y 12 de octubre 2026 en la ciudad de Mendoza. Solo 6 lugares." />
+<meta property="og:title" content="Retiro Emprendedor — Un espacio entre pares" />
+<meta property="og:description" content="Retiro presencial en la ciudad de Mendoza. 10, 11 y 12 de octubre 2026. 6 founders, sin pitch, sin curso." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --cream:#FAFAF7;
+    --ink:#0E0E0C;
+    --muted:#6B6B66;
+    --line:#E6E4DC;
+    --forest:#2D3B2D;
+    --night:#1A1F2E;
+    --earth:#3D2817;
+    --serif:'Playfair Display', Georgia, serif;
+    --sans:'Inter', -apple-system, sans-serif;
+  }
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+
+  .wrap{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+  .narrow{max-width:860px;margin:0 auto;padding:0 1.5rem}
+
+  section{padding:6rem 0}
+  @media(min-width:768px){section{padding:9rem 0}}
+
+  .label{
+    font-family:var(--sans);
+    font-size:.72rem;
+    font-weight:500;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  h2{font-size:clamp(2.2rem,4.5vw,3.6rem);margin-bottom:1.5rem}
+  h3{font-size:1.6rem;line-height:1.2}
+  p{font-size:1.05rem;color:#2A2A26}
+  .lead{font-size:1.25rem;line-height:1.55;color:#2A2A26}
+  em.serif{font-family:var(--serif);font-style:italic;font-weight:400}
+
+  /* Hero */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:2rem 1.5rem 4rem;
+    background-image:url("portada.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    color:#fff;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(18,18,18,.45) 0%,rgba(18,18,18,.85) 100%);
+    pointer-events:none;
+  }
+  .hero > *{
+    position:relative;
+    z-index:1;
+  }
+  .hero-top{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.9);
+  }
+  .hero-center{
+    flex:1;display:flex;flex-direction:column;justify-content:center;
+    max-width:1200px;margin:3rem auto 0;width:100%;
+  }
+  .hero-title{
+    font-family:var(--serif);
+    font-size:clamp(3rem,9vw,7.5rem);
+    font-weight:700;
+    line-height:.95;
+    letter-spacing:-.025em;
+    text-transform:uppercase;
+  }
+  .hero-title .amp{font-style:italic;font-weight:400;text-transform:none}
+  .hero-sub{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(1.3rem,2.4vw,1.8rem);
+    color:rgba(255,255,255,.9);
+    margin-top:1.5rem;
+  }
+  .hero-meta{
+    margin-top:3.5rem;
+    display:flex;flex-wrap:wrap;gap:2rem 3rem;
+    font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.8);
+  }
+  .hero-meta strong{color:rgba(255,255,255,.95);font-weight:500}
+  .hero-cta{margin-top:3rem}
+
+  .btn{
+    display:inline-block;
+    background:var(--ink);color:var(--cream);
+    font-family:var(--sans);font-size:.85rem;font-weight:500;
+    letter-spacing:.15em;text-transform:uppercase;
+    padding:1.15rem 2.2rem;border-radius:2px;
+    border:1px solid var(--ink);
+    transition:background .25s ease, color .25s ease, box-shadow .25s ease;
+    cursor:pointer;
+  }
+  .btn:hover{background:transparent;color:var(--ink)}
+  .hero .btn:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+
+  /* Qué es */
+  .text-center{text-align:center}
+  .negations{
+    display:grid;grid-template-columns:1fr;gap:1.5rem;
+    margin:3rem 0;
+  }
+  @media(min-width:768px){.negations{grid-template-columns:repeat(3,1fr);gap:3rem}}
+  .neg{
+    text-align:center;
+    font-family:var(--serif);font-style:italic;
+    font-size:1.4rem;color:var(--muted);
+    padding:1.5rem 0;
+    position:relative;
+  }
+  .neg::before{
+    content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:24px;height:1px;background:var(--ink);
+  }
+
+  /* Para quién */
+  .grid-3{
+    display:grid;grid-template-columns:1fr;gap:3rem;margin-top:4rem;
+  }
+  @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr);gap:4rem}}
+  .feature .num{
+    font-family:var(--serif);font-style:italic;font-size:2rem;color:var(--muted);
+    margin-bottom:1rem;display:block;
+  }
+  .feature h3{margin-bottom:.8rem;font-size:1.4rem}
+  .feature p{color:#3a3a36}
+
+  .note-block{
+    margin-top:5rem;padding:2.5rem;
+    background:#F2F0E8;
+    border-left:2px solid var(--ink);
+  }
+  .note-block .label{margin-bottom:.8rem;display:block}
+
+  /* Cómo funciona */
+  .points{margin-top:3rem;display:grid;gap:2rem}
+  .point{
+    display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start;
+    padding-bottom:2rem;border-bottom:1px solid var(--line);
+  }
+  .point:last-child{border-bottom:none}
+  .point .ico{
+    width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+    color:var(--ink);
+  }
+  .point .ico svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.2}
+  .point h3{font-family:var(--serif);font-size:1.3rem;margin-bottom:.4rem}
+
+  /* Itinerario — full bleed */
+  .itinerary{
+    background:var(--forest);
+    color:var(--cream);
+    padding:7rem 0;
+  }
+  @media(min-width:768px){.itinerary{padding:10rem 0}}
+  .itinerary .label{color:rgba(250,250,247,.6)}
+  .itinerary h2{color:var(--cream)}
+  .days{
+    display:grid;grid-template-columns:1fr;gap:3rem;margin-top:4rem;
+  }
+  @media(min-width:768px){.days{grid-template-columns:repeat(3,1fr);gap:3rem}}
+  .day{padding-top:2rem;border-top:1px solid rgba(250,250,247,.25)}
+  .day .day-name{
+    font-family:var(--serif);font-style:italic;font-size:2rem;
+    margin-bottom:.3rem;color:var(--cream);
+  }
+  .day .day-date{
+    font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+    color:rgba(250,250,247,.55);margin-bottom:1.5rem;display:block;
+  }
+  .day ul{list-style:none}
+  .day li{
+    padding:.7rem 0;
+    border-bottom:1px solid rgba(250,250,247,.12);
+    color:rgba(250,250,247,.85);font-size:.98rem;
+  }
+  .day li:last-child{border-bottom:none}
+
+  /* Organizadores */
+  .orgs{
+    display:grid;grid-template-columns:1fr;gap:4rem;margin-top:4rem;
+  }
+  @media(min-width:768px){.orgs{grid-template-columns:1fr 1fr;gap:5rem}}
+  .org-photo{
+    aspect-ratio:4/5;width:100%;
+    margin-bottom:1.5rem;
+    position:relative;overflow:hidden;
+  }
+  .org-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .org-photo.elias{background:linear-gradient(160deg,var(--night) 0%,#0d1018 100%)}
+  .org-photo.flor{background:linear-gradient(160deg,var(--earth) 0%,#1f1208 100%)}
+  .org-photo::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.06),transparent 60%);
+  }
+  .org h3{font-family:var(--serif);font-size:1.7rem;margin-bottom:.3rem}
+  .org .role{
+    font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:1rem;display:block;
+  }
+  .org p{color:#3a3a36}
+
+  /* Inversión */
+  .invest .lead{margin:1.5rem auto 3rem}
+  .incl{
+    display:grid;grid-template-columns:1fr;gap:2.5rem;margin:3rem 0;
+    text-align:left;
+  }
+  @media(min-width:640px){.incl{grid-template-columns:1fr 1fr;gap:3rem}}
+  .incl h4{
+    font-family:var(--sans);font-size:.78rem;font-weight:500;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:1rem;
+  }
+  .incl ul{list-style:none}
+  .incl li{
+    padding:.6rem 0;border-bottom:1px solid var(--line);
+    font-size:1rem;
+  }
+  .incl li:last-child{border-bottom:none}
+  .terms{
+    margin-top:3rem;padding-top:3rem;border-top:1px solid var(--line);
+    text-align:center;
+  }
+  .terms p{margin-bottom:1rem;color:#3a3a36}
+  .terms strong{font-weight:500;color:var(--ink)}
+
+  /* CTA final */
+  .final{
+    background:var(--night);color:var(--cream);
+    padding:8rem 1.5rem;text-align:center;
+  }
+  @media(min-width:768px){.final{padding:11rem 1.5rem}}
+  .final h2{
+    color:var(--cream);
+    font-size:clamp(2.4rem,5.5vw,4.5rem);
+    max-width:900px;margin:0 auto 2rem;
+    line-height:1.1;
+  }
+  .final h2 em{font-style:italic;color:rgba(250,250,247,.75)}
+  .final p{color:rgba(250,250,247,.7);max-width:600px;margin:0 auto 3rem;font-size:1.05rem}
+  .final .btns{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+  .final .btn{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+  .final .btn:hover{background:transparent;color:var(--cream)}
+  .final .btn.ghost{background:transparent;color:var(--cream);border-color:rgba(250,250,247,.5)}
+  .final .btn.ghost:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+
+  @media(max-width:767px){
+    section{padding:4rem 0}
+    .hero{padding:1.5rem 1rem 3rem}
+    .hero-top{flex-direction:column;align-items:flex-start;gap:.75rem}
+    .hero-center{margin:2rem auto 0;}
+    .hero-title{font-size:clamp(2.8rem,10vw,4.5rem)}
+    .hero-sub{font-size:1.15rem;}
+    .hero-meta{flex-direction:column;gap:1rem;margin-top:2rem;}
+    .hero-cta{margin-top:2.5rem;}
+    .hero-cta .btn{width:100%;max-width:100%;padding:1rem 1.4rem;}
+    .hero-meta span{display:block;}
+    .wrap,.narrow{padding-left:1rem;padding-right:1rem;}
+    .grid-3,.points,.days,.orgs,.incl{gap:1.5rem;}
+    .point{grid-template-columns:1fr;}
+    .final .btns{flex-direction:column;gap:1rem;}
+    .final h2{font-size:clamp(2.2rem,8vw,3rem);}
+    .final p{font-size:1rem;}
+  }
+
+  .animate{
+    opacity:0;
+    transform:translateY(2rem);
+    transition:opacity .85s ease-out var(--delay,0s),transform .85s ease-out var(--delay,0s);
+    will-change:opacity,transform;
+  }
+  .animate.fade-left{transform:translateX(-2rem);}
+  .animate.fade-right{transform:translateX(2rem);}
+  .animate.zoom-in{transform:scale(.96);}
+  .animate.is-visible{opacity:1;transform:translate(0);}
+  .animate .feature,
+  .animate .point,
+  .animate .day,
+  .animate .org,
+  .animate .incl > div,
+  .animate .btn{
+    opacity:0;
+    transform:translateY(1.2rem);
+    transition:opacity .75s ease-out,transform .75s ease-out;
+  }
+  .animate.is-visible .feature,
+  .animate.is-visible .point,
+  .animate.is-visible .day,
+  .animate.is-visible .org,
+  .animate.is-visible .incl > div,
+  .animate.is-visible .btn{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .animate .feature:nth-child(1),
+  .animate .point:nth-child(1),
+  .animate .day:nth-child(1),
+  .animate .org:nth-child(1),
+  .animate .incl > div:nth-child(1),
+  .animate .btn:nth-child(1){transition-delay:.1s}
+  .animate .feature:nth-child(2),
+  .animate .point:nth-child(2),
+  .animate .day:nth-child(2),
+  .animate .org:nth-child(2),
+  .animate .incl > div:nth-child(2),
+  .animate .btn:nth-child(2){transition-delay:.16s}
+  .animate .feature:nth-child(3),
+  .animate .point:nth-child(3),
+  .animate .day:nth-child(3),
+  .animate .org:nth-child(3){transition-delay:.22s}
+
+  footer{
+    padding:3rem 1.5rem;text-align:center;
+    font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--muted);background:var(--cream);
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-top animate fade-right" style="--delay:.05s">
+    <span>Retiro emprendedor · 2026</span>
+    <span>Ciudad de Mendoza</span>
+  </div>
+
+  <div class="hero-center animate fade-up" style="--delay:.1s">
+    <span class="label">10 · 11 · 12 de octubre 2026</span>
+    <h1 class="hero-title" style="margin-top:1.5rem">
+      Retiro<br>Emprendedor
+    </h1>
+    <p class="hero-sub">— Un espacio entre pares.</p>
+
+    <div class="hero-meta">
+      <span><strong>3 días</strong> · presencial</span>
+      <span><strong>6 founders</strong> · cupo total</span>
+      <span><strong>ciudad de Mendoza</strong> · Argentina</span>
+    </div>
+
+    <div class="hero-cta animate zoom-in" style="--delay:.2s">
+      <a class="btn" href="https://wa.me/5493435332132?text=Hola!%20Quiero%20reservar%20mi%20lugar%20en%20el%20Retiro%20Emprendedor%20de%20octubre." target="_blank" rel="noopener">Quiero mi lugar</a>
+    </div>
+  </div>
+</header>
+
+<!-- QUÉ ES -->
+<section class="animate fade-up">
+  <div class="narrow text-center">
+    <span class="label">Qué es</span>
+    <h2 style="margin-top:1.5rem">Tres días entre founders<br>que están construyendo algo propio.</h2>
+
+    <div class="negations">
+      <div class="neg">No es una conferencia</div>
+      <div class="neg">No es un curso</div>
+      <div class="neg">No es turismo grupal</div>
+    </div>
+
+    <p class="lead">
+      Es un espacio donde cada uno aporta desde su experiencia, conversa con pares reales,
+      y se va con claridad sobre lo próximo, vínculos que persisten y aprendizajes concretos.
+    </p>
+  </div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section class="animate fade-up" style="background:#F4F2EA">
+  <div class="wrap">
+    <div class="text-center" style="max-width:760px;margin:0 auto">
+      <span class="label">Para quién es</span>
+      <h2 style="margin-top:1.5rem">Tres condiciones.<br><em class="serif">El rubro no importa.</em></h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="feature">
+        <span class="num">01</span>
+        <h3>Ingresos reales</h3>
+        <p>Tu negocio propio ya genera ingresos. No ideas en papel, no proyectos pendientes — algo que funciona.</p>
+      </div>
+      <div class="feature">
+        <span class="num">02</span>
+        <h3>Autonomía</h3>
+        <p>Trabajás sin relación de dependencia. Tomás tus propias decisiones y cargás con sus consecuencias.</p>
+      </div>
+      <div class="feature">
+        <span class="num">03</span>
+        <h3>Ganas de avanzar</h3>
+        <p>Querés crecer, pivotar, o resolver algo concreto. Venís con algo en la cabeza, no solo a desconectar.</p>
+      </div>
+    </div>
+
+    <div class="note-block">
+      <span class="label">No está pensado para</span>
+      <p>Empleados que quieren emprender algún día. Personas sin ingresos todavía. Turistas buscando un fin de semana en Mendoza.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="animate fade-up">
+  <div class="narrow">
+    <div class="text-center">
+      <span class="label">Cómo funciona</span>
+      <h2 style="margin-top:1.5rem">Cada uno define previamente<br><em class="serif">qué aporta al grupo.</em></h2>
+      <p class="lead" style="margin-top:1.5rem">Enseñar algo, compartir una experiencia, facilitar una conversación. Llegás sabiendo qué vas a dar — no solo qué venís a buscar.</p>
+    </div>
+
+    <div class="points">
+      <div class="point animate fade-up" style="--delay:.1s">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div>
+          <h3>Mañanas de presentaciones</h3>
+          <p>Una o dos exposiciones por día, distribuidas a lo largo de los tres días. Tiempo para profundizar, no para apurar.</p>
+        </div>
+      </div>
+      <div class="point">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 18l6-8 5 6 7-9"/><path d="M21 18H3"/></svg></div>
+        <div>
+          <h3>Tardes al aire libre</h3>
+          <p>Actividades en la naturaleza cerca de Mendoza. El cuerpo se mueve, las conversaciones cambian.</p>
+        </div>
+      </div>
+      <div class="point">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></div>
+        <div>
+          <h3>Al menos un speaker invitado</h3>
+          <p>Una voz externa que aporta una mirada distinta a la del grupo.</p>
+        </div>
+      </div>
+      <div class="point">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></div>
+        <div>
+          <h3>Sin pitch ni ventas</h3>
+          <p>Nadie le vende a nadie. Ni productos, ni servicios, ni sociedades. Es lo que protege el espacio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARIO -->
+<section class="animate fade-up itinerary">
+  <div class="wrap">
+    <div class="text-center" style="max-width:700px;margin:0 auto">
+      <span class="label">Itinerario</span>
+      <h2 style="margin-top:1.5rem">Tres días<br><em class="serif">con forma propia.</em></h2>
+    </div>
+
+    <div class="days">
+      <div class="day">
+        <div class="day-name">Sábado</div>
+        <span class="day-date">10 de octubre · Llegada</span>
+        <ul>
+          <li>Llegada y check-in</li>
+          <li>Presentación del grupo</li>
+          <li>Cena de apertura</li>
+        </ul>
+      </div>
+      <div class="day">
+        <div class="day-name">Domingo</div>
+        <span class="day-date">11 de octubre · Inmersión</span>
+        <ul>
+          <li>Presentaciones por la mañana</li>
+          <li>Actividad al aire libre por la tarde</li>
+          <li>Noche libre</li>
+        </ul>
+      </div>
+      <div class="day">
+        <div class="day-name">Lunes</div>
+        <span class="day-date">12 de octubre · Cierre</span>
+        <ul>
+          <li>Última presentación</li>
+          <li>Cierre con decisiones concretas</li>
+          <li>Almuerzo y regreso</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIZADORES -->
+<section class="animate fade-up">
+  <div class="wrap">
+    <div class="text-center" style="max-width:760px;margin:0 auto">
+      <span class="label">Organizadores</span>
+      <h2 style="margin-top:1.5rem">No facilitadores externos.<br><em class="serif">Parte activa del retiro.</em></h2>
+    </div>
+
+    <div class="orgs">
+      <div class="org">
+        <div class="org-photo elias">
+          <img src="elias.png" alt="Foto de Elías Capasso" loading="lazy" />
+        </div>
+        <h3>Elías Capasso</h3>
+        <span class="role">Founder · CapassoTech & Vialto</span>
+        <p>Ingeniero en sistemas. Founder de CapassoTech y Vialto, SaaS para transporte y logística. Construye software que se usa todos los días en operaciones reales.</p>
+      </div>
+      <div class="org">
+        <div class="org-photo flor">
+          <img src="flor.jpeg" alt="Foto de Florencia Foos" loading="lazy" />
+        </div>
+        <h3>Florencia Foos</h3>
+        <span class="role">Asesora financiera · Inversiones bursátiles</span>
+        <p>Asesora financiera especializada en inversiones bursátiles. Cartera de más de 60 clientes con foco en emprendedores que quieren ordenar su capital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVERSIÓN -->
+<section class="animate fade-up invest" style="background:#F4F2EA">
+  <div class="narrow text-center">
+    <span class="label">Inversión</span>
+    <h2 style="margin-top:1.5rem">Pensión completa.</h2>
+    <p class="lead" style="margin-top:.75rem;font-size:.98rem;">Transporte por cuenta propia; te asesoramos para llegar de la mejor manera.</p>
+    <p class="lead">El precio exacto se comunica al consultar. Reservás con una seña del 30% y completás el saldo cuando se llena el cupo.</p>
+
+    <div class="incl">
+      <div>
+        <h4>Incluye</h4>
+        <ul>
+          <li>Alojamiento las 3 noches</li>
+          <li>Desayunos, almuerzos y cenas</li>
+          <li>Actividad grupal al aire libre</li>
+          <li>Speaker externo invitado</li>
+        </ul>
+      </div>
+      <div>
+        <h4>No incluye</h4>
+        <ul>
+          <li>Transporte hasta Mendoza</li>
+          <li>Gastos personales</li>
+          <li>Excursiones fuera del programa</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="terms">
+      <p><strong>Reserva:</strong> seña del 30% para asegurar tu lugar.</p>
+      <p><strong>Saldo:</strong> se cobra al completar los 6 lugares.</p>
+      <p><strong>Garantía:</strong> si no se llena el cupo, se devuelve la seña íntegra.</p>
+      <p style="margin-top:2rem;font-style:italic;font-family:var(--serif);font-size:1.15rem">El evento solo se confirma con los 6 lugares ocupados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="animate fade-up final">
+  <span class="label" style="color:rgba(250,250,247,.6)">Quedan lugares</span>
+  <h2 style="margin-top:1.5rem">Seis founders, tres días,<br><em>una conversación que no vas a tener en otro lado.</em></h2>
+  <p>Si te resuena, escribinos. Charlamos sin compromiso y te contamos los detalles que faltan: precio, logística, cómo se arma el grupo.</p>
+
+  <div class="btns">
+    <a class="btn" href="https://wa.me/5493435332132?text=Hola!%20Quiero%20reservar%20mi%20lugar%20en%20el%20Retiro%20Emprendedor%20de%20octubre." target="_blank" rel="noopener">Quiero mi lugar</a>
+    <a class="btn ghost" href="https://wa.me/5493435332132?text=Hola!%20Tengo%20una%20consulta%20sobre%20el%20Retiro%20Emprendedor." target="_blank" rel="noopener">Tengo una consulta</a>
+  </div>
+</section>
+
+<footer>
+  Retiro Emprendedor · Ciudad de Mendoza · 10, 11 y 12 de octubre 2026
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.15});
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  });
+</script>
+
+</body>
+</html>
