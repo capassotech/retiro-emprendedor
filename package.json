@@ -4,7 +4,7 @@
   "description": "Página web para Retiro Emprendedor",
   "main": "retiro-emprendedor.html",
   "scripts": {
-    "build": "mkdir dist 2>nul & copy *.html dist & copy *.png dist & copy *.jpeg dist"
+    "build": "mkdir -p dist && cp *.html dist/ && cp *.png dist/ && cp *.jpeg dist/"
   },
   "keywords": [],
   "author": "",
