@@ -8,6 +8,7 @@
 <meta property="og:title" content="Retiro Emprendedor — Un espacio entre pares" />
 <meta property="og:description" content="Retiro presencial en la ciudad de Mendoza. 10, 11 y 12 de octubre 2026. 6 emprendedores, sin pitch, sin curso." />
 <meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="logo-white.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -377,12 +378,12 @@
     display:flex;align-items:center;justify-content:space-between;
     height:56px;
   }
-  .nav-brand{
-    font-family:var(--serif);font-size:.95rem;font-weight:700;
-    letter-spacing:-.01em;color:#fff;white-space:nowrap;flex-shrink:0;
-    transition:color .4s ease;
-  }
-  .site-nav.scrolled .nav-brand{color:var(--ink)}
+  .nav-brand{display:flex;align-items:center;flex-shrink:0}
+  .nav-brand img{height:42px;width:auto;display:block;transition:opacity .4s ease}
+  .nav-brand .logo-dark{display:none}
+  .nav-brand .logo-light{display:block}
+  .site-nav.scrolled .nav-brand .logo-light{display:none}
+  .site-nav.scrolled .nav-brand .logo-dark{display:block}
   .nav-links{
     display:flex;align-items:center;list-style:none;gap:0;
   }
@@ -423,7 +424,10 @@
 <!-- NAV -->
 <nav class="site-nav" id="site-nav">
   <div class="nav-inner">
-    <a class="nav-brand" href="#inicio">Retiro Emprendedor</a>
+    <a class="nav-brand" href="#inicio">
+      <img class="logo-light" src="logo-black.png" alt="Retiro Emprendedor" />
+      <img class="logo-dark" src="logo-white.png" alt="Retiro Emprendedor" />
+    </a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
       <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
@@ -703,7 +707,8 @@
 </section>
 
 <footer>
-  Retiro Emprendedor · Ciudad de Mendoza · 10, 11 y 12 de octubre 2026
+  <img src="logo-white.png" alt="Retiro Emprendedor" style="height:80px;width:auto;display:block;margin:0 auto 1.5rem" />
+  Ciudad de Mendoza · 10, 11 y 12 de octubre 2026
 </footer>
 
 <script>
